@@ -90,6 +90,9 @@ export default {
 
   .wrapper{
     width:100%;
+    max-width:900px;
+    margin-left:auto;
+    margin-right:auto;
   }
 
   .dark-theme-text{
