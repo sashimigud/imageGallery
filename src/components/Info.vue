@@ -1,7 +1,7 @@
 <template lang="html">
   <div class="wrapper" :class="dark ? 'dark-theme' : 'light-theme'">
     <div class="text-box">
-     <button class="bullshit-button" :class="dark ? 'dark-theme-border' : 'light-theme-border'" @click="bullshit = !bullshit">Toggle bullshit</button>
+     <!-- <button class="bullshit-button" :class="dark ? 'dark-theme-border' : 'light-theme-border'" @click="bullshit = !bullshit">Toggle bullshit</button>
       <div class="toggle-bullshit" v-if="bullshit">
       <h2 class="bullshit-title">Abandon hope all ye who enter here!</h2>
 
@@ -14,7 +14,7 @@
          They haven't seen you in so long, they don't even recognize you anymore. You find yourself bursting with questions. How long where you gone? It couldn't have been more then a couple of articles. Could it? 
          And what about your family? Will you ever see your wife again? But most importantly how could Napoleon forget the harshness of the Russian winter?
       </p>
-      </div> 
+      </div>  -->
       <h4 class="real-title">Some actual info</h4>
       <p class="para">
          Hey there! 
