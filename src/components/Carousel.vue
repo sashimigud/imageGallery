@@ -90,7 +90,6 @@ export default {
 
   .wrapper{
     width:100%;
-    max-width:900px;
     margin-left:auto;
     margin-right:auto;
   }
@@ -165,8 +164,8 @@ export default {
   }
 
   .jumbotron{
-    width:900px;
-    height:650px;
+    width:50rem;
+    height:35rem;
     margin-left:10px;
     margin-right:10px;    
     display:flex;
@@ -192,6 +191,7 @@ export default {
     width:100px;
     height:40px;
     padding:2px;
+    margin-bottom:20px;
   }
 
   .toggle-gallery-button:hover{
