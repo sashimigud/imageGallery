@@ -9,8 +9,8 @@
       <button class='prev-button jumbo-buttons' :class="dark ? 'dark-theme-buttons' : 'light-theme-buttons'" @click="previous">Prev</button>
   </div>
     <div class="hidden-controls">
-      <button :class="dark ? 'dark-theme-buttons' : 'light-theme-buttons'" class='hidden-buttons hidden-next' @click="next">Next</button>
       <button class='hidden-buttons hidden-prev' :class="dark ? 'dark-theme-buttons' : 'light-theme-buttons'" @click="previous">Prev</button>
+      <button :class="dark ? 'dark-theme-buttons' : 'light-theme-buttons'" class='hidden-buttons hidden-next' @click="next">Next</button>
     </div>
   <div class="toggle-wrapper">
     <button class="toggle-gallery-button" :class="dark ? 'dark-theme-buttons' : 'light-theme-buttons'" @click="showGallery = !showGallery">Toggle Gallery</button>
@@ -253,11 +253,11 @@ export default {
   }
 
   .hidden-next{
-    margin-right:10px;
+    margin-left:10px;
   }
 
   .hidden-prev{
-    margin-left:10px;
+    margin-right:10px;
   }
 
 }
