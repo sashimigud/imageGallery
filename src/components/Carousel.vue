@@ -290,4 +290,11 @@ export default {
   }
 }
 
+@media screen and (max-width:380px) {
+  .jumbotron{
+    height:17rem;
+    width:97%;
+  }
+}
+
 </style>
