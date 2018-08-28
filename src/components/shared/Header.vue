@@ -9,7 +9,7 @@
           <a class="nav-link" :class="{'active-nav-link':activeLink('carousel')}" @click="activeComp('carousel')">HOME</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" :class="{'active-nav-link':activeLink('gallery')}" @click="activeComp('gallery')">GALLERY</a>
+          <a class="nav-link" :class="{'active-nav-link':activeLink('gallery')}" @click="activeComp('gallery')">THUMBNAILS</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" :class="{'active-nav-link':activeLink('info')}" @click="activeComp('info')">INFO</a>
@@ -27,14 +27,14 @@
     </div>
 
   </nav>
-
+<transition appear type="animation" name="fade">
   <div class="hamburger-menu" v-if="hamburger">
     <ul class="hamburger-ul">
         <li class="hamburger-menu-item" @click="activeComp('carousel')">
           <a class="hamburger-link" :class="{'active-nav-link':activeLink('carousel')}">HOME</a>
         </li>
         <li class="hamburger-menu-item" @click="activeComp('gallery')">
-          <a class="hamburger-link" :class="{'active-nav-link':activeLink('gallery')}">GALLERY</a>
+          <a class="hamburger-link" :class="{'active-nav-link':activeLink('gallery')}">THUMBNAILS</a>
         </li>
         <li class="hamburger-menu-item" @click="activeComp('info')">
           <a class="hamburger-link" :class="{'active-nav-link':activeLink('info')}">INFO</a>
@@ -44,6 +44,7 @@
         </li>
       </ul>
   </div>
+</transition>
 
 </div>
 </template>
@@ -56,7 +57,7 @@ export default {
     return {
       dark:false,
       activeItem:'carousel',
-      hamburger:true
+      hamburger:false
     }
   },
   methods:{
@@ -76,6 +77,23 @@ export default {
 </script>
 
 <style lang="css" scoped>
+
+  /* ------------------- fade -------------------------- */
+
+  .fade-enter{
+    opacity: 0;
+  }
+
+  .fade-enter-active{
+    transition: opacity .4s;
+  }
+
+  .fade-leave-active{
+    transition:opacity .4s;
+    opacity:0;
+  }
+
+  /* ----------------- fade end ------------------------- */
 
 
   .nav-wrapper{
@@ -188,7 +206,7 @@ export default {
   }
 
 
-  @media screen and (max-width: 390px) {
+  @media screen and (max-width: 420px) {
     .hamburger{
       display:block;
       width:41px;

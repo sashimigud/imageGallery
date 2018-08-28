@@ -1,7 +1,7 @@
 <template lang="html">
   <div class="wrapper" :class="dark ? 'dark-theme' : 'light-theme'">
     <div class="text-box">
-     <!-- <button class="bullshit-button" :class="dark ? 'dark-theme-border' : 'light-theme-border'" @click="bullshit = !bullshit">Toggle bullshit</button>
+    <!--  <button class="bullshit-button" :class="dark ? 'dark-theme-border' : 'light-theme-border'" @click="bullshit = !bullshit">Toggle bullshit</button>
       <div class="toggle-bullshit" v-if="bullshit">
       <h2 class="bullshit-title">Abandon hope all ye who enter here!</h2>
 
@@ -14,7 +14,7 @@
          They haven't seen you in so long, they don't even recognize you anymore. You find yourself bursting with questions. How long where you gone? It couldn't have been more then a couple of articles. Could it? 
          And what about your family? Will you ever see your wife again? But most importantly how could Napoleon forget the harshness of the Russian winter?
       </p>
-      </div>  -->
+      </div> --> 
       <h4 class="real-title">Some actual info</h4>
       <p class="para">
          Hey there! 
@@ -26,6 +26,11 @@
          <br>
          I have yet to implement mobile/tablet-friendly ui. It is however, coming soon. Consider this a MVP of sorts.
       </p>
+    </div>
+
+    <div class="contact">
+      <p class="contact-para">If you have any tips that could help improve either the website or the drawings, you can send me an email at <span class="email-span" v-if="showEmail">tylerhelm@gmail.com</span> </p>
+      <button type="button" class="show-email" :class="dark ? 'dark-theme-border' : 'light-theme-border'" @click="showEmail = !showEmail">Show Email</button>
     </div>
   </div>
 </template>
@@ -39,7 +44,8 @@ export default {
   data(){
     return {
       bullshit:false,
-      dark:false
+      dark:false,
+      showEmail:false
     }
   },
   created(){
@@ -68,6 +74,17 @@ export default {
   }
 
   .bullshit-button:hover{
+    border:1px solid black;
+  }
+
+  .show-email{
+    height:40px;
+    width:80px;
+    border-bottom: 1px solid black;
+    margin-bottom:20px;
+  }
+
+  .show-email:hover{
     border:1px solid black;
   }
 
@@ -110,6 +127,40 @@ export default {
     color:black;
   }
 
+  .contact{
+    text-align:center;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:10px;
+    width:60%;
+  }
 
+  .email-span{
+    color:red;
+  }
+
+  .contact-para{
+    line-height: 1.5rem;
+  }
+
+  @media screen and (max-width:666px) {
+    .text-box{
+      width:75%;
+    }
+  }
+
+  @media screen and (max-width:552px) {
+    .text-box{
+      width:80%;
+      margin-top:50px;
+    }
+  }
+
+  @media screen and (max-width:390px) {
+    .text-box{
+      width:95%;
+      margin-top:30px;
+    }
+  }
 
 </style>

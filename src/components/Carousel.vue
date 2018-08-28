@@ -8,6 +8,10 @@
       <button :class="dark ? 'dark-theme-buttons' : 'light-theme-buttons'" class='next-button jumbo-buttons' @click="next">Next</button>
       <button class='prev-button jumbo-buttons' :class="dark ? 'dark-theme-buttons' : 'light-theme-buttons'" @click="previous">Prev</button>
   </div>
+    <div class="hidden-controls">
+      <button :class="dark ? 'dark-theme-buttons' : 'light-theme-buttons'" class='hidden-buttons hidden-next' @click="next">Next</button>
+      <button class='hidden-buttons hidden-prev' :class="dark ? 'dark-theme-buttons' : 'light-theme-buttons'" @click="previous">Prev</button>
+    </div>
   <div class="toggle-wrapper">
     <button class="toggle-gallery-button" :class="dark ? 'dark-theme-buttons' : 'light-theme-buttons'" @click="showGallery = !showGallery">Toggle Gallery</button>
   </div>
@@ -49,7 +53,6 @@ export default {
       this.selectImage(active);
     },
     previous(){
-      console.log("clicked");
       var active = this.activeImage-1;
       if(active < 0){
         active = this.slides.length - 1;
@@ -87,6 +90,10 @@ export default {
 </script>
 
 <style lang="css" scoped>
+
+  .hidden-controls{
+    display:none;
+  }
 
   .wrapper{
     width:100%;
@@ -201,7 +208,7 @@ export default {
   .thumbnails{
     display:flex;
     flex-wrap:wrap;
-    width:900px;
+    width:85%;
     margin-top:15px;
     margin-bottom:10px;
     margin-left:auto;
@@ -223,8 +230,64 @@ export default {
 
 /*------------- Carousel end ---------------------*/
 
-@media screen and (max-width: 992px) {
-  
+@media screen and (max-width: 900px) {
+  .hidden-controls{
+    display:flex;
+    justify-content: center;
+    margin-bottom:40px;
+  }
+
+  .jumbo-buttons{
+    display:none;
+  }
+
+  .jumbotron{
+    width:80%;
+    height:30rem;
+  }
+
+  .hidden-buttons{
+    height:40px;
+    width:50px;
+    border-bottom:1px solid black;
+  }
+
+  .hidden-next{
+    margin-right:10px;
+  }
+
+  .hidden-prev{
+    margin-left:10px;
+  }
+
+}
+
+@media screen and (max-width:700px) {
+  .jumbotron{
+    height:20rem;
+    width:70%;
+  }
+}
+
+@media screen and (max-width:700px) {
+  .jumbotron{
+    height:22rem;
+    width:80%;
+  }
+}
+
+@media screen and (max-width:500px) {
+  .jumbotron{
+    height:20rem;
+    width:95%;
+  }
+}
+
+@media screen and (max-width:380px) {
+  .jumbotron{
+    height:17rem;
+    width:97%;
+  }
 }
 
 </style>

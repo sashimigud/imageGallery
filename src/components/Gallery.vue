@@ -54,7 +54,7 @@ export default {
   .thumbnails{
     display:flex;
     flex-wrap:wrap;
-    width:900px;
+    width:80%;
     margin-top:70px;
     margin-bottom:10px;
     margin-left:auto;
@@ -71,5 +71,16 @@ export default {
     width:100%;
     height:100%;
     cursor:pointer;
+  }
+
+  @media screen and (max-width:600px) {
+    .thumbnails{
+      width:97%;
+      margin-top:40px;
+    }
+
+    .slide{
+      width:132px;
+    }
   }
 </style>
