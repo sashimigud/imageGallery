@@ -208,7 +208,7 @@ export default {
   .thumbnails{
     display:flex;
     flex-wrap:wrap;
-    width:85%;
+    width:60%;
     margin-top:15px;
     margin-bottom:10px;
     margin-left:auto;
