@@ -1,6 +1,7 @@
 const path = require('path')
 const webpack = require('webpack')
 const { VueLoaderPlugin } = require('vue-loader')
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = {
   entry: './src/main.js',
@@ -59,6 +60,9 @@ module.exports = {
     hints: false
   },
   devtool: '#eval-source-map',
+  optimization: {
+    minimizer: [new UglifyJsPlugin()],
+  },
   plugins: [
     // make sure to include the plugin for the magic
     new VueLoaderPlugin()
@@ -72,12 +76,6 @@ if (process.env.NODE_ENV === 'production') {
     new webpack.DefinePlugin({
       'process.env': {
         NODE_ENV: '"production"'
-      }
-    }),
-    new webpack.optimize.UglifyJsPlugin({
-      sourceMap: true,
-      compress: {
-        warnings: false
       }
     }),
     new webpack.LoaderOptionsPlugin({
