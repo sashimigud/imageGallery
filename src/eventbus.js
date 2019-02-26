@@ -18,6 +18,11 @@ export const Eventbus = new Vue({
                   title: 'Form Ferd',
                   imagePath: '/static/THelmff.jpg',
                   id: 2
+                },
+                {
+                  title: 'Danger - Life',
+                  imagePath: '/static/danger-life.jpeg',
+                  id: 3
                 }
               ]
         }
