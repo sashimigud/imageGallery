@@ -19,8 +19,7 @@
       <p class="para">
          Hey there! 
          I'm a Norwegian student, currently working on my master thesis in computer science. 
-         In addition to being a huge nerd, I really like digital art, and as you've seen here, I do dabble myself.
-         I'm also a novice web-developer. That is essentially why this page even exists. This project is a way for me 
+         In addition to being a huge nerd, I really like digital art. That is essentially why this page even exists. This project is a way for me 
          to combine two of my favourite past-times. And if you're reading this, I succeded. Well done, me.
          <br>
          <br>
