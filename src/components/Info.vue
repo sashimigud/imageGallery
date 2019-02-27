@@ -1,5 +1,5 @@
 <template lang="html">
-  <div class="wrapper" :class="dark ? 'dark-theme' : 'light-theme'">
+  <div class="wrapper" :class="dark ? 'light-theme' : 'dark-theme'">
     <div class="text-box">
     <!--  <button class="bullshit-button" :class="dark ? 'dark-theme-border' : 'light-theme-border'" @click="bullshit = !bullshit">Toggle bullshit</button>
       <div class="toggle-bullshit" v-if="bullshit">
@@ -47,12 +47,11 @@ export default {
       showEmail:false
     }
   },
-  created(){
-    Eventbus.$on('colorWasChanged', () => {
-      this.dark = !this.dark;
-    });
-  }
-
+  created () {
+      Eventbus.$on('colorWasChanged', () => {
+        this.dark = !this.dark
+      })
+    }
 }
 </script>
 
@@ -89,6 +88,7 @@ export default {
 
   .wrapper{
     width:100%;
+    /* background-color:rgba(255, 255, 255, 0) */
   }
 
   .text-box{
@@ -108,6 +108,7 @@ export default {
 
   .dark-theme{
     color:white;
+    background-color: #373737;
   }
 
   .dark-theme-border{
@@ -124,6 +125,7 @@ export default {
 
   .light-theme{
     color:black;
+    background-color: white;
   }
 
   .contact{
