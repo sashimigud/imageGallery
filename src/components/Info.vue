@@ -29,7 +29,7 @@
 
     <div class="contact">
       <p class="contact-para">If you have any tips that could help improve either the website or the drawings, you can send me an email at <span class="email-span" v-if="showEmail">tylerhelm.arthub@gmail.com</span> </p>
-      <button type="button" class="show-email" :class="dark ? 'dark-theme-border' : 'light-theme-border'" @click="showEmail = !showEmail">Show Email</button>
+      <button type="button" class="show-email" :class="dark ? 'light-theme-border' : 'dark-theme-border'" @click="showEmail = !showEmail">Show Email</button>
     </div>
   </div>
 </template>
