@@ -79,6 +79,7 @@ export default {
     height:40px;
     width:80px;
     border-bottom: 1px solid yellow;
+    color:yellow;
   }
 
   .show-email:hover{
@@ -87,7 +88,7 @@ export default {
 
   .wrapper{
     width:70%;
-    background-color:#178282;
+    background-color:#66B9BF;
     margin-left:auto;
     margin-right:auto;
     padding:30px;
@@ -109,7 +110,7 @@ export default {
     line-height: 1.5rem;
     padding:20px;
     padding-top:5px;
-    color:yellow;
+    color:black;
   }
 
   .contact{
@@ -118,7 +119,7 @@ export default {
     margin-right:auto;
     margin-top:10px;
     width:60%;
-    color:yellow;
+    color:#380c5b;
   }
 
   .email-span{
