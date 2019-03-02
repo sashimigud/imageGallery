@@ -1,5 +1,5 @@
 <template lang="html">
-  <div class="wrapper" :class="dark ? 'dark-theme' : 'light-theme'">
+  <div class="wrapper">
     <div class="text-box">
     <!--  <button class="bullshit-button" :class="dark ? 'dark-theme-border' : 'light-theme-border'" @click="bullshit = !bullshit">Toggle bullshit</button>
       <div class="toggle-bullshit" v-if="bullshit">
@@ -17,7 +17,7 @@
       </div> --> 
       <h4 class="real-title">Some actual info</h4>
       <p class="para">
-         Hey there! 
+         Welcome to my corner of the internet! 
          I'm a Norwegian student, currently working on my master thesis in computer science. 
          In addition to being a huge nerd, I really like digital art. That is essentially why this page even exists. This project is a way for me 
          to combine two of my favourite past-times. And if you're reading this, I succeded. Well done, me.
@@ -29,7 +29,7 @@
 
     <div class="contact">
       <p class="contact-para">If you have any tips that could help improve either the website or the drawings, you can send me an email at <span class="email-span" v-if="showEmail">tylerhelm.arthub@gmail.com</span> </p>
-      <button type="button" class="show-email" :class="dark ? 'dark-theme-border' : 'light-theme-border'" @click="showEmail = !showEmail">Show Email</button>
+      <button type="button" class="show-email" @click="showEmail = !showEmail">Show Email</button>
     </div>
   </div>
 </template>
@@ -47,7 +47,7 @@ export default {
       showEmail:false
     }
   },
-  created () {
+  mounted () {
       Eventbus.$on('colorWasChanged', () => {
         this.dark = !this.dark
       })
@@ -57,12 +57,12 @@ export default {
 
 <style lang="css" scoped>
 
-  .bullshit-title{
-    margin-top:20px;
+  .real-title{
+    color:yellow;
   }
 
-  .real-title{
-    margin-top:30px;
+  .bullshit-title{
+    margin-top:20px;
   }
 
   .bullshit-button{
@@ -78,24 +78,29 @@ export default {
   .show-email{
     height:40px;
     width:80px;
-    border-bottom: 1px solid black;
-    margin-bottom:20px;
+    border-bottom: 1px solid yellow;
   }
 
   .show-email:hover{
-    border:1px solid black;
+    border:1px solid yellow;
   }
 
   .wrapper{
-    width:100%;
-    /* background-color:rgba(255, 255, 255, 0) */
+    width:70%;
+    background-color:#178282;
+    margin-left:auto;
+    margin-right:auto;
+    padding:30px;
+    margin-top:100px;
+    -webkit-box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.75);
   }
 
   .text-box{
     text-align:center;
     margin-left:auto;
     margin-right:auto;
-    margin-top:70px;
     width:60%;
   }
 
@@ -104,28 +109,7 @@ export default {
     line-height: 1.5rem;
     padding:20px;
     padding-top:5px;
-  }
-
-  .dark-theme{
-    color:white;
-    background-color: #373737;
-  }
-
-  .dark-theme-border{
-    border-color: white;
-  }
-
-  .dark-theme-border:hover{
-    border-color:white;
-  }
-
-  .light-theme-border{
-    border-color:black;
-  }
-
-  .light-theme{
-    color:black;
-    background-color: white;
+    color:yellow;
   }
 
   .contact{
@@ -134,10 +118,11 @@ export default {
     margin-right:auto;
     margin-top:10px;
     width:60%;
+    color:yellow;
   }
 
   .email-span{
-    color:red;
+    color:black;
   }
 
   .contact-para{
