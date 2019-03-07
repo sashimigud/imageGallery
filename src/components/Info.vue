@@ -29,7 +29,7 @@
 
     <div class="contact">
       <p class="contact-para">If you have any tips that could help improve either the website or the drawings, you can send me an email at <span class="email-span" v-if="showEmail">tylerhelm.arthub@gmail.com</span> </p>
-      <button type="button" class="show-email" @click="showEmail = !showEmail">Show Email</button>
+      <button type="button" class="show-email" @click="showEmail = !showEmail">{{ toggle }}</button>
     </div>
   </div>
 </template>
@@ -44,7 +44,13 @@ export default {
     return {
       bullshit:false,
       dark:false,
-      showEmail:false
+      showEmail:false,
+    }
+  },
+  computed:{
+    toggle () {
+      let content = this.showEmail ? 'Hide Email' : 'Show Email'
+      return content
     }
   },
   mounted () {
