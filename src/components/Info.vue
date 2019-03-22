@@ -21,9 +21,6 @@
          I'm a Norwegian student, currently working on my master thesis in computer science. 
          In addition to being a huge nerd, I really like digital art. That is essentially why this page even exists. This project is a way for me 
          to combine two of my favourite past-times. And if you're reading this, I succeded. Well done, me.
-         <br>
-         <br>
-         I have yet to implement mobile/tablet-friendly ui. It is however, coming soon. Consider this a MVP of sorts.
       </p>
     </div>
 
@@ -99,6 +96,7 @@ export default {
     margin-right:auto;
     padding:30px;
     margin-top:30px;
+    margin-bottom:15px;
     -webkit-box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.75);
     box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.75);
@@ -114,7 +112,6 @@ export default {
   .para{
     text-align:center;
     line-height: 1.5rem;
-    padding:20px;
     padding-top:5px;
     color:black;
   }
@@ -124,7 +121,7 @@ export default {
     margin-left:auto;
     margin-right:auto;
     margin-top:10px;
-    width:60%;
+    width:100%;
     color:#380c5b;
   }
 
@@ -134,11 +131,5 @@ export default {
 
   .contact-para{
     line-height: 1.5rem;
-  }
-
-  @media screen and (max-width:405px) {
-    .email-span {
-      font-size: 10px;
-    }
   }
 </style>
