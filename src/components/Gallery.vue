@@ -73,7 +73,7 @@ export default {
     cursor:pointer;
   }
 
-  @media screen and (max-width:600px) {
+  @media screen and (max-width:456px) {
     .thumbnails{
       width:97%;
       margin-top:40px;

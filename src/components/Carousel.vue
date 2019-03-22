@@ -208,7 +208,7 @@ export default {
   .thumbnails{
     display:flex;
     flex-wrap:wrap;
-    width:60%;
+    width:50%;
     margin-top:15px;
     margin-bottom:10px;
     margin-left:auto;
@@ -242,8 +242,12 @@ export default {
   }
 
   .jumbotron{
-    width:80%;
-    height:30rem;
+    height:20rem;
+    width:70%;
+  }
+
+  .thumbnails {
+    width:455px;
   }
 
   .hidden-buttons{
@@ -259,13 +263,11 @@ export default {
   .hidden-prev{
     margin-right:10px;
   }
-
 }
 
-@media screen and (max-width:700px) {
-  .jumbotron{
-    height:20rem;
-    width:70%;
+@media screen and (min-width:900px) {
+  .thumbnails {
+    width:600px;
   }
 }
 
@@ -281,12 +283,8 @@ export default {
     height:20rem;
     width:95%;
   }
-}
-
-@media screen and (max-width:380px) {
-  .jumbotron{
-    height:17rem;
-    width:97%;
+  .thumbnails {
+    width:300px;
   }
 }
 
@@ -297,4 +295,9 @@ export default {
   }
 }
 
+@media screen and (max-width:310px) {
+  .thumbnails {
+    width:151px;
+  }
+}
 </style>
