@@ -70,17 +70,34 @@ export default {
   .slide img{
     width:100%;
     height:100%;
-    cursor:pointer;
   }
 
-  @media screen and (max-width:456px) {
+  @media screen and (max-width:900px) {
+    .thumbnails {
+      width:600px;
+    }
+  }
+
+  @media screen and (max-width:600px) {
+    .thumbnails {
+      width:450px;
+    }
+  }
+
+  @media screen and (max-width:455px) {
     .thumbnails{
-      width:97%;
+      width:330px;
       margin-top:40px;
     }
 
     .slide{
-      width:132px;
+      width:153px;
+    }
+  }
+
+  @media screen and (max-width: 330px) {
+    .thumbnails {
+      width:163px;
     }
   }
 </style>

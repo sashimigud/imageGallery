@@ -93,12 +93,12 @@ export default {
   }
 
   .wrapper{
-    width:70%;
+    width:90%;
     background-color:#66B9BF;
     margin-left:auto;
     margin-right:auto;
     padding:30px;
-    margin-top:100px;
+    margin-top:30px;
     -webkit-box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.75);
     box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.75);
@@ -108,7 +108,7 @@ export default {
     text-align:center;
     margin-left:auto;
     margin-right:auto;
-    width:60%;
+    width:100%;
   }
 
   .para{
@@ -136,24 +136,9 @@ export default {
     line-height: 1.5rem;
   }
 
-  @media screen and (max-width:666px) {
-    .text-box{
-      width:75%;
+  @media screen and (max-width:405px) {
+    .email-span {
+      font-size: 10px;
     }
   }
-
-  @media screen and (max-width:552px) {
-    .text-box{
-      width:80%;
-      margin-top:50px;
-    }
-  }
-
-  @media screen and (max-width:390px) {
-    .text-box{
-      width:95%;
-      margin-top:30px;
-    }
-  }
-
 </style>

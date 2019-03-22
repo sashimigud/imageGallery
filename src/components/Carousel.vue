@@ -242,7 +242,7 @@ export default {
   }
 
   .jumbotron{
-    height:20rem;
+    height:24rem;
     width:70%;
   }
 
