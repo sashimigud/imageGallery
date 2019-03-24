@@ -248,11 +248,6 @@ export default {
     height:35rem!important;
   }
 
-  .landscape {
-    width:50rem!important;
-    height:35rem!important;
-  }
-
 
 /*------------- Carousel end ---------------------*/
 
@@ -312,12 +307,20 @@ export default {
   .thumbnails {
     width:300px;
   }
+  .portrait {
+    width:30rem!important;
+    height:30rem!important;
+  }
 }
 
 @media screen and (max-width:380px) {
   .jumbotron{
     height:17rem;
     width:97%;
+  }
+  .portrait {
+    width:30rem!important;
+    height:30rem!important;
   }
 }
 
