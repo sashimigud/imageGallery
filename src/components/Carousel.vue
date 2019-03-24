@@ -2,9 +2,11 @@
 <div class="wrapper">
   <h2 class="current-title" :class="dark ? 'dark-theme-text' : 'light-theme-text'">{{ currentTitle }}</h2>
   <div class="jumbo-wrapper">
-    <div class="jumbotron" :class="dark ? 'dark-theme-shadow' : 'light-theme-shadow'">
-      <img :src="currentImage" />
+    <transition name="fade" mode="out-in">
+    <div v-show="show" class="jumbotron" :class="[orientation === 'landscape' ? 'landscape' : 'portrait', dark ? 'dark-theme-shadow' : 'light-theme-shadow']">
+        <img :src="currentImage" />
     </div>
+    </transition>
       <button :class="dark ? 'dark-theme-buttons' : 'light-theme-buttons'" class='next-button jumbo-buttons' @click="next">Next</button>
       <button class='prev-button jumbo-buttons' :class="dark ? 'dark-theme-buttons' : 'light-theme-buttons'" @click="previous">Prev</button>
   </div>
@@ -37,16 +39,29 @@ export default {
     return {
       dark:false,
       showGallery:false,
+      show:true,
       slides: [],
-      activeImage:0
+      activeImage:0,
+      orientation:'portrait'
     }
   },
   methods:{
     selectImage(index){
-      this.activeImage = index;
+      this.show = false
+      this.show = true
+      this.activeImage = index
+      this.ori(this.slides[this.activeImage])
+    },
+    ori(bilde){
+      if(bilde.orientation === 'portrait')
+        this.orientation = 'portrait'
+      else {
+        this.orientation = 'landscape'
+      }
     },
     next(){
       var active = this.activeImage+1;
+
       if(active >= this.slides.length){
         active = 0;
       }
@@ -54,6 +69,7 @@ export default {
     },
     previous(){
       var active = this.activeImage-1;
+
       if(active < 0){
         active = this.slides.length - 1;
       }
@@ -227,6 +243,16 @@ export default {
     cursor:pointer;
   }
 
+  .portrait {
+    width:30rem!important;
+    height:35rem!important;
+  }
+
+  .landscape {
+    width:50rem!important;
+    height:35rem!important;
+  }
+
 
 /*------------- Carousel end ---------------------*/
 
@@ -300,4 +326,34 @@ export default {
     width:151px;
   }
 }
+
+/* -------------------- animasjon ------------ */
+
+.fade-enter-active {
+   animation: enter .2s;
+}
+.fade-leave-active /* .fade-leave-active below version 2.1.8 */ {
+   animation: leave .2s;
+}
+
+    @keyframes enter {
+      0% {
+        opacity: 0;
+        transform: scale(1);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(0);
+      }
+    }
+    @keyframes leave {
+      0% {
+        opacity: 1;
+        transform: scale(0);
+      }
+      100% {
+        opacity: 0;
+        transform: scale(1);
+      }
+    }
 </style>
