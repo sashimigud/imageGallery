@@ -12,25 +12,25 @@ export const Eventbus = new Vue({
                 },
                 {
                   title: 'Pagliacci',
-                  imagePath: '/static/pagliacci2.jpg',
+                  imagePath: '/static/pagliacci.png',
                   id: 1,
                   orientation:'landscape'
                 },
                 {
                   title: 'Form Ferd',
-                  imagePath: '/static/THelmff.jpg',
+                  imagePath: '/static/form_ferd.jpg',
                   id: 2,
                   orientation:'landscape'
                 },
                 {
                   title: 'Danger - Life',
-                  imagePath: '/static/danger-life.jpeg',
+                  imagePath: '/static/danger-life.png',
                   id: 3,
                   orientation:'landscape'
                 },
                 {
                   title: 'Astro Naut',
-                  imagePath: '/static/astronaut.jpg',
+                  imagePath: '/static/astro_naut.png',
                   id: 0,
                   orientation:'landscape'
                 }
