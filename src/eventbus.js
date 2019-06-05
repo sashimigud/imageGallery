@@ -12,26 +12,50 @@ export const Eventbus = new Vue({
                 },
                 {
                   title: 'Pagliacci',
-                  imagePath: '/static/pagliacci.png',
+                  imagePath: '/static/pagliacci.jpg',
                   id: 1,
                   orientation:'landscape'
                 },
                 {
-                  title: 'Form Ferd',
-                  imagePath: '/static/form_ferd.jpg',
+                  title: 'Formferd',
+                  imagePath: '/static/formferd.jpg',
                   id: 2,
                   orientation:'landscape'
                 },
                 {
                   title: 'Danger - Life',
-                  imagePath: '/static/danger-life.png',
+                  imagePath: '/static/danger-life.jpeg',
                   id: 3,
                   orientation:'landscape'
                 },
                 {
                   title: 'Astro Naut',
-                  imagePath: '/static/astro_naut.png',
+                  imagePath: '/static/astronaut.jpg',
                   id: 0,
+                  orientation:'landscape'
+                },
+                {
+                  title: 'Brill',
+                  imagePath: '/static/brill.jpg',
+                  id: 5,
+                  orientation:'landscape'
+                },
+                {
+                  title: 'Tim Scully',
+                  imagePath: '/static/tim_scully.png',
+                  id:9,
+                  orientation:'landscape'
+                },
+                {
+                  title: 'egodød er vanskelig',
+                  imagePath: '/static/egodod.jpg',
+                  id:10,
+                  orientation:'landscape'
+                },
+                {
+                  title: 'chronasjer',
+                  imagePath: '/static/famfoto.jpg',
+                  id:11,
                   orientation:'landscape'
                 }
               ]
